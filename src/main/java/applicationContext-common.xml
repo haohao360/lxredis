@@ -15,11 +15,14 @@
                         http://www.springframework.org/schema/aop
                         http://www.springframework.org/schema/aop/spring-aop.xsd
                         http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
+    
 	<context:property-placeholder location="classpath:jdbc.properties"/>
-	
+	<!-- -->
 	<context:component-scan base-package="net.redis">
+	
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+		 
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
 	
@@ -57,7 +60,7 @@
 		<property name="configLocation" value="classpath:configuration.xml"/>
 	</bean>
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="net.redis.dao.user,net.redis.dao.ext"/>
+		<property name="basePackage" value="net.redis.dao"/>
 	</bean>
 
 
