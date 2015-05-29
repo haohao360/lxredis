@@ -5,8 +5,6 @@ import javax.servlet.http.HttpServletRequest;
 import net.redis.dto.user.User;
 import net.redis.service.user.IUserService;
 
-import net.redis.service.user.impl.UserService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
